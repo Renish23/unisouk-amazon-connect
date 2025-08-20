@@ -36,28 +36,24 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* Key Benefits */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            {/* Key Benefits - Simplified */}
+            <div className="flex flex-wrap gap-6">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-foreground">Real-time order sync</span>
+                <span className="text-foreground font-medium">Real-time sync</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-foreground">Unified inventory management</span>
+                <span className="text-foreground font-medium">Unified dashboard</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-foreground">Advanced analytics</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-foreground">Multi-platform insights</span>
+                <span className="text-foreground font-medium">Advanced analytics</span>
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* CTA Button - Single Primary */}
+            <div>
               <a
                 href="#connect"
                 className="btn-hero group inline-flex items-center justify-center"
@@ -65,22 +61,18 @@ const HeroSection = () => {
                 Connect Amazon Account
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a
-                href="#demo"
-                className="btn-hero-outline inline-flex items-center justify-center"
-              >
-                See Live Demo
-              </a>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-6 pt-8 border-t border-border">
-              {trustIndicators.map((indicator, index) => (
-                <div key={index} className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <indicator.icon className="w-4 h-4 text-accent" />
-                  <span>{indicator.text}</span>
-                </div>
-              ))}
+            {/* Trust Indicators - Simplified */}
+            <div className="flex flex-wrap gap-6 pt-6">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Users className="w-4 h-4 text-accent" />
+                <span>500+ Active Sellers</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Shield className="w-4 h-4 text-accent" />
+                <span>Bank-grade Security</span>
+              </div>
             </div>
           </div>
 

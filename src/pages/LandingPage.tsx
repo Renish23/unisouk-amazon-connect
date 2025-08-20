@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
-import BenefitsSection from '@/components/BenefitsSection';
+import UniSoukEffectSection from '@/components/UniSoukEffectSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ConnectSection from '@/components/ConnectSection';
 import Footer from '@/components/Footer';
@@ -15,7 +15,7 @@ const LandingPage = () => {
         <HeroSection />
         <FeaturesSection />
         <HowItWorksSection />
-        <BenefitsSection />
+        <UniSoukEffectSection />
         <TestimonialsSection />
         <ConnectSection />
       </main>

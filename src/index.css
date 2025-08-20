@@ -11,20 +11,20 @@
     --background: 210 20% 98%;
     --foreground: 210 12% 16%;
     
-    /* Primary Brand Colors */
-    --primary: 213 61% 35%; /* Deep Blue #2C5282 */
+    /* Primary Brand Colors - More Vibrant */
+    --primary: 220 90% 56%; /* Vibrant Blue #2563EB */
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 213 61% 30%;
+    --primary-hover: 220 90% 50%;
     
-    /* Secondary Brand Colors */
-    --secondary: 23 82% 57%; /* Warm Orange #ED8936 */
+    /* Secondary Brand Colors - More Energetic */
+    --secondary: 20 94% 60%; /* Energetic Orange #FB923C */
     --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 23 82% 52%;
+    --secondary-hover: 20 94% 55%;
     
-    /* Accent Colors */
-    --accent: 146 57% 43%; /* Success Green #38A169 */
+    /* Accent Colors - Brighter Success */
+    --accent: 142 76% 47%; /* Vibrant Green #10B981 */
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 146 57% 38%;
+    --accent-hover: 142 76% 42%;
     
     /* Neutral Colors */
     --neutral: 210 20% 98%; /* Light Gray #F7FAFC */
@@ -54,11 +54,11 @@
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-hover)) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-hover)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    /* Vibrant Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 60%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 90% 98%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);

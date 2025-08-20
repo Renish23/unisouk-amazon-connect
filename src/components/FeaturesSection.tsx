@@ -15,40 +15,24 @@ import {
 const FeaturesSection = () => {
   const features = [
     {
-      icon: RefreshCw,
       title: 'Real-time Synchronization',
       description: 'Automatically sync orders, inventory, and product data across Amazon and other marketplaces in real-time.',
-      color: 'text-primary'
+      gradient: 'from-primary to-primary-hover'
     },
     {
-      icon: BarChart3,
       title: 'Unified Analytics Dashboard',
       description: 'Get comprehensive insights with combined analytics from all your marketplaces in one beautiful dashboard.',
-      color: 'text-secondary'
+      gradient: 'from-secondary to-secondary-hover'
     },
     {
-      icon: Package,
-      title: 'Inventory Management',
-      description: 'Centralized inventory tracking with automated stock updates and low-stock alerts across all platforms.',
-      color: 'text-accent'
+      title: 'Smart Inventory Management',
+      description: 'Centralized inventory tracking with automated stock updates and intelligent low-stock alerts across all platforms.',
+      gradient: 'from-accent to-accent-hover'
     },
     {
-      icon: DollarSign,
       title: 'Revenue Optimization',
-      description: 'Maximize profits with pricing insights, margin analysis, and performance tracking across channels.',
-      color: 'text-warning'
-    },
-    {
-      icon: Clock,
-      title: 'Time-saving Automation',
-      description: 'Automate repetitive tasks like order processing, inventory updates, and report generation.',
-      color: 'text-primary'
-    },
-    {
-      icon: Shield,
-      title: 'Secure Integration',
-      description: 'Bank-grade security with encrypted data transmission and secure API connections to protect your business.',
-      color: 'text-accent'
+      description: 'Maximize profits with intelligent pricing insights, margin analysis, and performance tracking across channels.',
+      gradient: 'from-primary to-secondary'
     }
   ];
 
@@ -76,21 +60,20 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        {/* Features Grid - Clean & Simple */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="card-feature group hover:scale-105 transition-all duration-300"
+              className="relative p-8 rounded-2xl bg-gradient-to-br from-card via-card to-neutral border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`integration-icon ${feature.color} mb-6 group-hover:scale-110 transition-transform`}>
-                <feature.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-foreground">
+              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.gradient} rounded-t-2xl`}></div>
+              
+              <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 {feature.description}
               </p>
             </div>
