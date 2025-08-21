@@ -61,20 +61,23 @@ const UniSoukEffectSection = () => {
           {transformationData.map((item, index) => (
             <div 
               key={index}
-              className="relative p-8 rounded-2xl bg-card border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-center"
+              className="relative p-8 rounded-2xl bg-card border border-border shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-105 group text-center cursor-pointer"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-5 rounded-2xl group-hover:opacity-15 transition-all duration-500`}></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500"></div>
               
-              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${item.color} text-white mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                <item.icon className="w-8 h-8" />
-              </div>
-              
-              <div className="space-y-3">
-                <div className={`text-4xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
-                  {item.metric}
+              <div className="relative z-10">
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${item.color} text-white mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-lg group-hover:shadow-2xl`}>
+                  <item.icon className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <div className="text-xl font-semibold text-foreground">{item.label}</div>
-                <p className="text-muted-foreground">{item.description}</p>
+                
+                <div className="space-y-3">
+                  <div className={`text-4xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300`}>
+                    {item.metric}
+                  </div>
+                  <div className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">{item.label}</div>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">{item.description}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -145,21 +148,6 @@ const UniSoukEffectSection = () => {
           </div>
         </div>
 
-        {/* Bottom Stats */}
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
-          <div className="text-center bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
-            <div className="text-4xl font-bold text-primary mb-2">₹2Cr+</div>
-            <div className="text-muted-foreground font-medium">Monthly GMV Processed</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-8 border border-secondary/20">
-            <div className="text-4xl font-bold text-secondary mb-2">500+</div>
-            <div className="text-muted-foreground font-medium">Successful Sellers</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20">
-            <div className="text-4xl font-bold text-accent mb-2">99.9%</div>
-            <div className="text-muted-foreground font-medium">Uptime Reliability</div>
-          </div>
-        </div>
       </div>
     </section>
   );

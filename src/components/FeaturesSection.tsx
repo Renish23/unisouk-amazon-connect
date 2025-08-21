@@ -64,15 +64,16 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="relative p-8 rounded-2xl bg-gradient-to-br from-card via-card to-neutral border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+              className="relative p-8 rounded-2xl bg-gradient-to-br from-card via-card to-neutral border border-border shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.gradient} rounded-t-2xl`}></div>
+              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.gradient} rounded-t-2xl group-hover:h-2 transition-all duration-300`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
               
-              <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-lg group-hover:text-foreground transition-colors duration-300">
                 {feature.description}
               </p>
             </div>
@@ -92,14 +93,20 @@ const FeaturesSection = () => {
             {integrations.map((integration, index) => (
               <div 
                 key={index}
-                className="text-center p-4 rounded-lg border border-border hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                className="text-center p-6 rounded-xl border border-border hover:shadow-lg transition-all duration-500 hover:-translate-y-2 hover:scale-110 group bg-gradient-to-br from-background to-neutral cursor-pointer relative overflow-hidden"
               >
-                <div className="text-3xl mb-2">{integration.logo}</div>
-                <div className="font-medium text-sm text-foreground">{integration.name}</div>
-                <div className={`text-xs mt-1 ${
-                  integration.status === 'Active' ? 'text-accent' : 'text-warning'
-                }`}>
-                  {integration.status}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="text-4xl mb-3 transform group-hover:scale-125 transition-transform duration-300">{integration.logo}</div>
+                  <div className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors duration-300">{integration.name}</div>
+                  <div className={`inline-flex items-center justify-center px-2 py-1 rounded-full text-xs mt-2 font-medium ${
+                    integration.status === 'Active' ? 'bg-accent/20 text-accent' : 'bg-warning/20 text-warning'
+                  } group-hover:scale-105 transition-transform duration-300`}>
+                    <div className={`w-2 h-2 rounded-full mr-1 ${
+                      integration.status === 'Active' ? 'bg-accent animate-pulse' : 'bg-warning'
+                    }`}></div>
+                    {integration.status}
+                  </div>
                 </div>
               </div>
             ))}

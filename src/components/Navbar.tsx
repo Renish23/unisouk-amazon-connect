@@ -17,9 +17,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Benefits', href: '#benefits' },
     { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Pricing', href: '#pricing' },
   ];
 
   return (
@@ -56,9 +54,9 @@ const Navbar = () => {
               href="https://dashboard.unisouk.com/auth/login/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground hover:bg-primary-hover px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+              className="bg-primary text-primary-foreground hover:bg-primary-hover px-3 py-1.5 rounded-lg font-medium transition-colors duration-200 text-sm"
             >
-              Login
+              Connect Amazon Account
             </a>
           </div>
 
@@ -93,10 +91,10 @@ const Navbar = () => {
                   href="https://dashboard.unisouk.com/auth/login/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-primary text-primary-foreground hover:bg-primary-hover px-4 py-2 rounded-lg font-medium transition-colors duration-200 w-full text-center block"
+                  className="bg-primary text-primary-foreground hover:bg-primary-hover px-3 py-1.5 rounded-lg font-medium transition-colors duration-200 w-full text-center block text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Login
+                  Connect Amazon Account
                 </a>
               </div>
             </div>

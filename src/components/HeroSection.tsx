@@ -52,13 +52,24 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* CTA Button - Single Primary */}
-            <div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#connect"
+                href="https://dashboard.unisouk.com/auth/login/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-hero group inline-flex items-center justify-center"
               >
                 Connect Amazon Account
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="https://app.storylane.io/share/szxlx9zg6i2j"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-hero-outline group inline-flex items-center justify-center"
+              >
+                Demo
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

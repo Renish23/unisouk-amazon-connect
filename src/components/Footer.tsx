@@ -58,35 +58,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      {/* Newsletter Section */}
-      <div className="border-b border-primary-foreground/10">
-        <div className="section-container py-12">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">
-              Stay Updated with Amazon Selling Tips
-            </h3>
-            <p className="text-primary-foreground/80 mb-6">
-              Get weekly insights, platform updates, and exclusive strategies 
-              to grow your Amazon business.
-            </p>
-            
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="btn-hero whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="section-container py-16">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
@@ -109,14 +80,14 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-secondary" />
-                <a href="tel:+911234567890" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  +91 1234-567-890
+                <a href="tel:+919033002465" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  +91 90330 02465
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary" />
-                <a href="mailto:support@unisouk.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  support@unisouk.com
+                <a href="mailto:connect@unisouk.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  connect@unisouk.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">

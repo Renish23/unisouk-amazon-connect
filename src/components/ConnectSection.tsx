@@ -51,8 +51,7 @@ const ConnectSection = () => {
               Your Amazon Business?
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Join 500+ successful sellers who have already streamlined their 
-              operations and increased their revenue with UniSouk.
+              Join hundreds of successful sellers who have streamlined their operations with UniSouk.
             </p>
           </div>
 
@@ -70,36 +69,17 @@ const ConnectSection = () => {
                 </p>
 
                 {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <input
-                        type="email"
-                        placeholder="Enter your business email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                      />
-                    </div>
-                    
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="btn-hero w-full group disabled:opacity-50 disabled:cursor-not-allowed"
+                  <div className="space-y-4">
+                    <a
+                      href="https://dashboard.unisouk.com/auth/login/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-hero w-full group inline-flex items-center justify-center"
                     >
-                      {isSubmitting ? (
-                        <div className="flex items-center justify-center">
-                          <div className="w-5 h-5 border-2 border-secondary-foreground border-t-transparent rounded-full animate-spin mr-2"></div>
-                          Connecting...
-                        </div>
-                      ) : (
-                        <>
-                          Connect Amazon Account Now
-                          <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </>
-                      )}
-                    </button>
-                  </form>
+                      Connect Amazon Account Now
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </div>
                 ) : (
                   <div className="bg-accent/10 border border-accent/20 rounded-lg p-6">
                     <div className="flex items-center space-x-3 mb-4">
@@ -180,33 +160,16 @@ const ConnectSection = () => {
           </div>
 
           {/* Alternative Options */}
-          <div className="text-center mt-12 space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#demo"
-                className="btn-hero-outline inline-flex items-center justify-center"
-              >
-                Watch Live Demo First
-              </a>
-              <a
-                href="#support"
-                className="text-primary hover:text-primary-hover font-medium inline-flex items-center justify-center"
-              >
-                Speak with Integration Expert
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-            </div>
-
-            <p className="text-sm text-muted-foreground">
-              Questions? Call us at{' '}
-              <a href="tel:+911234567890" className="text-primary hover:text-primary-hover font-medium">
-                +91 1234-567-890
-              </a>{' '}
-              or email{' '}
-              <a href="mailto:support@unisouk.com" className="text-primary hover:text-primary-hover font-medium">
-                support@unisouk.com
-              </a>
-            </p>
+          <div className="text-center mt-12">
+            <a
+              href="https://app.storylane.io/share/szxlx9zg6i2j"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-hero-outline inline-flex items-center justify-center"
+            >
+              Watch Live Demo
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>
