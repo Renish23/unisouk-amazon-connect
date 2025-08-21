@@ -63,17 +63,6 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* Trust Indicators - Simplified */}
-            <div className="flex flex-wrap gap-6 pt-6">
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Users className="w-4 h-4 text-accent" />
-                <span>500+ Active Sellers</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-accent" />
-                <span>Bank-grade Security</span>
-              </div>
-            </div>
           </div>
 
           {/* Dashboard Preview */}
@@ -102,12 +91,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
     </section>
   );
 };

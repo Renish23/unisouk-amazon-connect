@@ -53,10 +53,12 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center">
             <a
-              href="#connect"
-              className="btn-hero"
+              href="https://dashboard.unisouk.com/auth/login/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-primary-foreground hover:bg-primary-hover px-4 py-2 rounded-lg font-medium transition-colors duration-200"
             >
-              Connect Amazon Account
+              Login
             </a>
           </div>
 
@@ -88,11 +90,13 @@ const Navbar = () => {
               ))}
               <div className="px-4 pt-2">
                 <a
-                  href="#connect"
-                  className="btn-hero w-full text-center block"
+                  href="https://dashboard.unisouk.com/auth/login/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary text-primary-foreground hover:bg-primary-hover px-4 py-2 rounded-lg font-medium transition-colors duration-200 w-full text-center block"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Connect Amazon Account
+                  Login
                 </a>
               </div>
             </div>
